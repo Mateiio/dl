@@ -1,0 +1,59 @@
+cd D:\crtUsers\Iulia\projects\repos\paav_cargo
+
+
+rem D:
+rem cd D:\crtusers\Matei\projects
+
+cd D:\repos
+docker run ^
+-it ^
+--rm ^
+--name containerprf ^
+-p 8888:8888 ^
+-v %cd%:/workspace:rw ^
+quay.io/jupyter/datascience-notebook ^
+/bin/bash -c "jupyter lab --notebook-dir=/ --ip='*' --port=8888 --no-browser --allow-root"
+
+
+cd D:\repos
+docker run ^
+-it ^
+--rm ^
+--name containerprf ^
+-p 8888:8888 ^
+-v %cd%:/workspace:rw ^
+quay.io/jupyter/datascience-notebook:ubuntu-22.04 ^
+/bin/bash -c "jupyter lab --notebook-dir=/ --ip='*' --port=8888 --no-browser --allow-root"
+
+
+
+
+
+
+
+
+
+
+
+
+(base) jovyan@de6cd427c900:/workspace/DeepLearning/ForRepo/src/utils$ ls -la ./../../../../Data/neural-networks-and-deep-learning-master/neural-networks-and-deep-learning-master/data/mnist.pkl.gz 
+-rwxrwxrwx 1 root root 17051982 Aug 23 19:16 ./../../../../Data/neural-networks-and-deep-learning-master/neural-networks-and-deep-learning-master/data/mnist.pkl.gz
+(base) jovyan@de6cd427c900:/workspace/DeepLearning/ForRepo/src/utils$ cd ./../../../../Data/neural-networks-and-deep-learning-master/neural-networks-and-deep-learning-master/data/
+(base) jovyan@de6cd427c900:/workspace/Data/neural-networks-and-deep-learning-master/neural-networks-and-deep-learning-master/data$ gunzip mnist.pkl.gz
+(base) jovyan@de6cd427c900:/workspace/Data/neural-networks-and-deep-learning-master/neural-networks-and-deep-learning-master/data$ ls -la mnist.pkl 
+-rwxrwxrwx 1 jovyan users 220080342 Aug 23 19:16 mnist.pkl
+
+
+
+
+
+
+
+
+
+D:\repos>git clone https://github.com/Mateiio/dl.git
+
+
+
+
+
